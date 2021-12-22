@@ -2,30 +2,32 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 import FollowersList from "../FollowersList";
 
-jest.mock("axios", () => ({
-  __esModule: true,
+jest.mock("axios");
 
-  default: {
-    get: () => ({
-      data: {
-        results: [
-          {
-            name: {
-              first: "Umut",
-              last: "Akin",
-            },
-            picture: {
-              large: "https://randomuser.me/api/portraits/men/39.jpg",
-            },
-            login: {
-              username: "umutakin",
-            },
-          },
-        ],
-      },
-    }),
-  },
-}));
+// jest.mock("axios", () => ({
+//   __esModule: true,
+
+//   default: {
+//     get: () => ({
+//       data: {
+//         results: [
+//           {
+//             name: {
+//               first: "Umut",
+//               last: "Akin",
+//             },
+//             picture: {
+//               large: "https://randomuser.me/api/portraits/men/39.jpg",
+//             },
+//             login: {
+//               username: "umutakin",
+//             },
+//           },
+//         ],
+//       },
+//     }),
+//   },
+// }));
 
 const MockFollowersList = () => {
   return (
